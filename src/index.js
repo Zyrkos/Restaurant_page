@@ -8,11 +8,14 @@ const website = () => {
     const header = document.createElement("div");
     header.classList.add("header");
 
-    container.appendChild("header");
+    const navbar = createNavbar(); // Call createNavbar function to get the navbar element
+
+    header.appendChild(navbar); // Append navbar to header
+    container.appendChild(header);
   };
 
-  /* const createNavbar = () => {
-    const navbar = document.createElement("nav");
+  const createNavbar = () => {
+    const nav = document.createElement("nav"); // fixed variable name
     nav.className = "navbar";
     nav.id = "navbar";
 
@@ -27,7 +30,7 @@ const website = () => {
       link.id = id;
       link.href = "#";
       link.textContent = text;
-      return link;
+      return link; // Return link element
     });
 
     const ul = document.createElement("ul");
@@ -35,15 +38,14 @@ const website = () => {
     ul.id = "tabs";
     ul.append(...links);
 
-    return navbar;
-  }; */
+    nav.appendChild(ul); // Append ul element to nav
+    return nav; // Return nav element
+  };
 
   createHeader();
-
-  return { createHeader };
 };
 
-website(git )
+website(); // Call the website function to create the header and navbar
 
 /* const createMain = () => {
       const main = document.createElement("main");
