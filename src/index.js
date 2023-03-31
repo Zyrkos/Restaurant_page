@@ -1,18 +1,53 @@
+/* import { createHome } from "./modules/home";
+import { createMenu } from "./modules/menu";
+import { createContact } from "./modules/contact"; */
 
+const website = () => {
+  const createHeader = () => {
+    const container = document.getElementById("container");
+    const header = document.createElement("div");
+    header.classList.add("header");
 
+    container.appendChild("header");
+  };
 
+  /* const createNavbar = () => {
+    const navbar = document.createElement("nav");
+    nav.className = "navbar";
+    nav.id = "navbar";
 
+    const linkData = [
+      { id: "link-home", text: "Home" },
+      { id: "link-menu", text: "Menu" },
+      { id: "link-contact", text: "Contact" },
+    ];
 
+    const links = linkData.map(({ id, text }) => {
+      const link = document.createElement("a");
+      link.id = id;
+      link.href = "#";
+      link.textContent = text;
+      return link;
+    });
 
+    const ul = document.createElement("ul");
+    ul.className = "nav-list";
+    ul.id = "tabs";
+    ul.append(...links);
 
+    return navbar;
+  }; */
 
-/* const container = document.getElementById("container")
+  createHeader();
 
-const homeDiv = document.createElement("div");
-homeDiv.classList.add("home-div");
-const headline = document.createElement("h1");
-const headlineText = document.createTextNode("Hello, welcome to plant based Sintra")
-headline.appendChild(headlineText)
-homeDiv.appendChild(headline)
+  return { createHeader };
+};
 
-container.appendChild(homeDiv) */
+website(git )
+
+/* const createMain = () => {
+      const main = document.createElement("main");
+      main.className = "main";
+      main.id = "main";
+      return main;
+    }; */
