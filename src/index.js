@@ -1,6 +1,6 @@
 import { createHome } from "./modules/home";
-/* import { createMenu } from "./modules/menu";
-import { createContact } from "./modules/contact"; */
+import { createMenu } from "./modules/menu";
+import { createContact } from "./modules/contact";
 
 const website = () => {
   const container = document.getElementById("container");
@@ -8,14 +8,14 @@ const website = () => {
     const header = document.createElement("div");
     header.classList.add("header");
 
-    const navbar = createNavbar(); // Call createNavbar function to get the navbar element
+    const navbar = createNavbar();
 
-    header.appendChild(navbar); // Append navbar to header
+    header.appendChild(navbar);
     container.appendChild(header);
   };
 
   const createNavbar = () => {
-    const nav = document.createElement("nav"); // fixed variable name
+    const nav = document.createElement("nav");
     nav.classList.add("navbar");
     nav.id = "navbar";
 
@@ -42,16 +42,52 @@ const website = () => {
     ul.id = "tabs";
     ul.append(...links);
 
-    nav.appendChild(ul); // Append ul element to nav
-    return nav; // Return nav element
+    nav.appendChild(ul);
+    return nav;
   };
 
   const createMain = () => {
+    const tabs = document.getElementById("tabs");
+    let currentTab;
+    
+    
     createHome();
+    currentTab = document.getElementById("home-main")
+  
+    tabs.addEventListener("click", function eventHandler(e) {
+      if (e.target.id === "link-home") { //check if the current link click is the same as link-home
+        if (currentTab !== document.getElementById("home-main")) {  //if the link click isn't the currentTab
+          if (currentTab) {
+            currentTab.remove(); //removes the current tab
+          }
+          createHome(); //passes the module
+          currentTab = document.getElementById("home-main"); //sets the current module as the currentTab
+        }
+      } else if (e.target.id === "link-menu") {
+        if (currentTab !== document.getElementById("menu-main")) {
+          if (currentTab) {
+            currentTab.remove();
+          }
+          createMenu();
+          currentTab = document.getElementById("menu-main");
+        }
+      } else if (e.target.id === "link-contact") {
+        if (currentTab !== document.getElementById("contact-main")) {
+          if(currentTab) {
+            currentTab.remove();
+          }
+          createContact();
+          currentTab = document.getElementById("contact-main")
+        }
+      }
+      
+    });
   };
-
+  /* e.target.removeEventListener("click", eventHandler); */
   createHeader();
   createMain();
 };
 
 website(); // Call the website function to create the header and navbar
+
+/*------------EXAMPLE OF TAB SWITCHING-----------------*/
