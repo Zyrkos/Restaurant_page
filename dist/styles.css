@@ -47,3 +47,16 @@ a {
   display: flex;
   align-items: center;
 }
+
+.main {
+  height: 777px;
+  background-color: var(--middle-green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-wrapper {
+  background-color: white;
+  
+}
