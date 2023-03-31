@@ -58,5 +58,6 @@ a {
 
 .flex-wrapper {
   background-color: white;
-  
+  width: 30%;
+  height: 80%;
 }
