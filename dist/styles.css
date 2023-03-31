@@ -1,0 +1,49 @@
+:root {
+  --dark-green: rgb(21, 65, 35);
+  --light-green: rgb(117, 193, 84);
+  --middle-green: rgb(3, 51, 5);
+}
+
+*,
+* ::before,
+* ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: white;
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+}
+
+.header {
+  height: 10rem;
+  background-color: var(--light-green);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  font-size: 2rem;
+}
+
+.navbar li,
+a {
+  color: white;
+  list-style: none;
+  text-decoration: none;
+  padding: 2rem;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}
