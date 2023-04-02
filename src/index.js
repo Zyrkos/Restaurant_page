@@ -49,14 +49,15 @@ const website = () => {
   const createMain = () => {
     const tabs = document.getElementById("tabs");
     let currentTab;
-    
-    
+
     createHome();
-    currentTab = document.getElementById("home-main")
-  
+    currentTab = document.getElementById("home-main");
+
     tabs.addEventListener("click", function eventHandler(e) {
-      if (e.target.id === "link-home") { //check if the current link click is the same as link-home
-        if (currentTab !== document.getElementById("home-main")) {  //if the link click isn't the currentTab
+      if (e.target.id === "link-home") {
+        //check if the current link clicked is the same as link-home
+        if (currentTab !== document.getElementById("home-main")) {
+          //if the link click isn't the currentTab
           if (currentTab) {
             currentTab.remove(); //removes the current tab
           }
@@ -73,21 +74,18 @@ const website = () => {
         }
       } else if (e.target.id === "link-contact") {
         if (currentTab !== document.getElementById("contact-main")) {
-          if(currentTab) {
+          if (currentTab) {
             currentTab.remove();
           }
           createContact();
-          currentTab = document.getElementById("contact-main")
+          currentTab = document.getElementById("contact-main");
         }
       }
-      
     });
   };
-  /* e.target.removeEventListener("click", eventHandler); */
+
   createHeader();
   createMain();
 };
 
-website(); // Call the website function to create the header and navbar
-
-/*------------EXAMPLE OF TAB SWITCHING-----------------*/
+website();

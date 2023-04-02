@@ -1,3 +1,5 @@
+@import url("https://fonts.cdnfonts.com/css/sharp-sans");
+
 :root {
   --dark-green: rgb(21, 65, 35);
   --light-green: rgb(117, 193, 84);
@@ -16,6 +18,7 @@ html,
 body {
   background-color: white;
   height: 100vh;
+  font-family: 'Sharp Sans', sans-serif;
 }
 
 .container {
@@ -50,7 +53,7 @@ a {
 
 .main {
   height: 777px;
-  background-color: var(--middle-green);
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,6 +61,12 @@ a {
 
 .flex-wrapper {
   background-color: white;
-  width: 30%;
+  width: 80%;
   height: 80%;
+}
+
+
+.headerSpan {
+  display: flex;
+  justify-content: center;
 }
