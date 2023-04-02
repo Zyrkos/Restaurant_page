@@ -7,7 +7,7 @@ export function createHome() {
   flexWrapper.classList.add("flex-wrapper");
 
   const contentDiv = document.createElement("div");
-  contentDiv.classList.add("content-div");
+  contentDiv.classList.add("content-div-home");
 
   const headerSpan = document.createElement("span");
   headerSpan.classList.add("headerSpan");

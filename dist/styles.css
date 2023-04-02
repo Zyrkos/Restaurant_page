@@ -18,7 +18,7 @@ html,
 body {
   background-color: white;
   height: 100vh;
-  font-family: 'Sharp Sans', sans-serif;
+  font-family: "Sharp Sans", sans-serif;
 }
 
 .container {
@@ -44,12 +44,20 @@ a {
   list-style: none;
   text-decoration: none;
   padding: 2rem;
+  font-weight: 700;
+}
+
+.navbar a:hover {
+  font-weight: 1000;
+  text-decoration: underline;
 }
 
 .nav-list {
   display: flex;
   align-items: center;
 }
+
+/*----------------HEADER END---------------------*/
 
 .main {
   height: 777px;
@@ -65,8 +73,15 @@ a {
   height: 80%;
 }
 
-
 .headerSpan {
   display: flex;
   justify-content: center;
+}
+
+.content-div-home {
+  background-color: var(--dark-green);
+  color: white;
+  font-weight: bold;
+  height: 600px;
+  margin-top: 5rem;
 }
