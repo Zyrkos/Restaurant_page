@@ -22,7 +22,7 @@ const website = () => {
     const linkData = [
       { id: "link-home", text: "Home", href: "#" },
       { id: "link-menu", text: "Menu", href: "#" },
-      { id: "link-contact", text: "Contact", href: "#" },
+      { id: "link-contact", text: "Contacts", href: "#" },
     ];
 
     const links = linkData.map(({ id, text, href }) => {
