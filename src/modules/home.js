@@ -12,6 +12,23 @@ export function createHome() {
 
   const footer = document.createElement("footer");
 
+  const creditSpan = document.createElement("span");
+  creditSpan.classList.add("credit-span");
+
+  const licenseSpan = document.createElement("span");
+  licenseSpan.classList.add("license-span");
+  const copywright = document.createElement("p");
+  copywright.textContent = "© Pedro Castro 2023";
+
+  const imgCredit = document.createElement("a");
+  imgCredit.textContent = "Photo by Anna Pelzer";
+  imgCredit.href = "https://unsplash.com/@annapelzer";
+
+  licenseSpan.appendChild(copywright)
+  footer.appendChild(licenseSpan);
+  creditSpan.appendChild(imgCredit);
+
+  footer.appendChild(creditSpan);
   container.appendChild(main);
   headerSpan.appendChild(headline);
   main.appendChild(headerSpan);
