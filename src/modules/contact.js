@@ -1,28 +1,27 @@
 export function createContact() {
   const main = document.createElement("main");
   main.setAttribute("id", "contact-main");
-  main.classList.add("main");
+
   /*--------------------------------------------*/
-  const flexWrapper = document.createElement("div");
-  flexWrapper.classList.add("flex-wrapper");
-
-  const contentDiv = document.createElement("div");
-  contentDiv.classList.add("content-div");
-
   const headerSpan = document.createElement("span");
-  headerSpan.classList.add("headerSpan");
+  headerSpan.classList.add("header-span");
 
   const headline = document.createElement("h1");
-  headline.textContent = "Contact";
+  headline.textContent = "Contacts";
   headerSpan.appendChild(headline);
 
-  const para = document.createElement("p");
-  para.textContent =
-    "Placeholder Conctacs";
+  const footer = document.createElement("footer");
 
-  flexWrapper.appendChild(headerSpan);
-  contentDiv.appendChild(para);
+  const licenseSpan = document.createElement("span");
+  licenseSpan.classList.add("license-span");
+  const copywright = document.createElement("p");
+  copywright.textContent = "© Pedro Castro 2023";
+
+  licenseSpan.appendChild(copywright);
+  footer.appendChild(licenseSpan);
+
   container.appendChild(main);
-  main.appendChild(flexWrapper);
-  flexWrapper.appendChild(contentDiv);
+  headerSpan.appendChild(headline);
+  main.appendChild(headerSpan);
+  main.appendChild(footer);
 }

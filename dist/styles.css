@@ -44,6 +44,7 @@ body {
 .navbar {
   display: flex;
   font-size: 1.5rem;
+  justify-content: flex-end;
 }
 
 .nav-list {
@@ -121,4 +122,22 @@ footer {
 
 #home-main {
   height: 100vh;
+}
+
+/*---------------HOME-END-----------*/
+
+/*---------------MENU-------------*/
+
+#menu-main {
+  height: 100vh;
+  background-color: var(--lighter-grey-green);
+}
+
+/*------------MENU-END-------------*/
+
+/*----------CONTACTS-------------*/
+
+#contact-main {
+  height: 100vh;
+  background-color: var(--lighter-grey-green);
 }
