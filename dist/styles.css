@@ -4,6 +4,9 @@
   --dark-green: rgb(21, 65, 35);
   --light-green: rgb(117, 193, 84);
   --middle-green: rgb(3, 51, 5);
+  --darkest-green: rgb(1, 33, 2);
+  --grey-green: rgb(48, 79, 76);
+  --lighter-grey-green: rgb(103, 142, 139);
 }
 
 *,
@@ -16,27 +19,39 @@
 
 html,
 body {
-  height: 100vh;
   font-family: "Sharp Sans", sans-serif;
 }
 
+html {
+  background: url(../images/avocado.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
 .header {
-  height: 8rem;
-  background-color: var(--light-green);
-  display: flex;
-  align-content: center;
-  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  z-index: 1;
 }
 
 .navbar {
   display: flex;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .nav-list {
   display: flex;
   align-items: center;
-  gap: 5rem;
+  gap: 2rem;
 }
 
 .navbar li,
@@ -44,7 +59,7 @@ a {
   color: white;
   list-style: none;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .navbar a {
@@ -57,7 +72,6 @@ a {
   text-decoration: none;
   display: block;
   width: 100%;
-
   height: 2px;
   bottom: -2px;
   left: 0;
@@ -74,28 +88,41 @@ a {
   font-weight: 1000;
 }
 /*----------------HEADER END---------------------*/
-
 .main {
   height: 777px;
-
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.flex-wrapper {
-  width: 80%;
-  height: 80%;
-}
+/*--------------HOME----------------*/
 
-.headerSpan {
-  display: flex;
-  justify-content: center;
-}
-
-.content-div-home {
+.header-span {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-90%, 10%);
+  text-align: center;
   color: white;
   font-weight: bold;
-  height: 600px;
-  margin-top: 5rem;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  top: -20;
 }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* Add a fixed height to the footer */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  z-index: 1;
+}
+
+

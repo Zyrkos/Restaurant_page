@@ -3,26 +3,17 @@ export function createHome() {
   main.setAttribute("id", "home-main");
   main.classList.add("main");
   /*--------------------------------------------*/
-  const flexWrapper = document.createElement("div");
-  flexWrapper.classList.add("flex-wrapper");
-
-  const contentDiv = document.createElement("div");
-  contentDiv.classList.add("content-div-home");
-
   const headerSpan = document.createElement("span");
-  headerSpan.classList.add("headerSpan");
+  headerSpan.classList.add("header-span");
 
   const headline = document.createElement("h1");
-  headline.textContent = "Home";
+  headline.textContent = "Welcome to Plant-Based Sintra";
   headerSpan.appendChild(headline);
 
-  const para = document.createElement("p");
-  para.textContent =
-    "Welcome to Plant Based Sintra, your favourite vegan restaurant";
+  const footer = document.createElement("footer");
 
-  flexWrapper.appendChild(headerSpan);
-  contentDiv.appendChild(para);
   container.appendChild(main);
-  main.appendChild(flexWrapper);
-  flexWrapper.appendChild(contentDiv);
+  headerSpan.appendChild(headline);
+  main.appendChild(headerSpan);
+  main.appendChild(footer);
 }
