@@ -22,14 +22,6 @@ body {
   font-family: "Sharp Sans", sans-serif;
 }
 
-#home-main {
-  background: url(../images/avocado.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 .header {
   position: absolute;
   top: 0;
@@ -100,10 +92,19 @@ footer {
   display: flex;
   justify-content: space-between;
   font-size: 0.85rem;
+  
 }
 /*----------------HEADER END---------------------*/
 
 /*--------------HOME----------------*/
+#home-main {
+  background: url(../images/avocado.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100dvh;
+}
 
 .header-span {
   position: absolute;
@@ -120,9 +121,7 @@ footer {
   top: -20;
 }
 
-#home-main {
-  height: 100vh;
-}
+
 
 /*---------------HOME-END-----------*/
 
