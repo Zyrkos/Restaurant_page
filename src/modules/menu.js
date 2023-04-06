@@ -1,6 +1,7 @@
 export function createMenu() {
   const main = document.createElement("main");
   main.setAttribute("id", "menu-main");
+  main.classList.add("menu-main");
 
   /*---------------------------------------------*/
 
@@ -128,11 +129,31 @@ export function createMenu() {
     menuGridWrapper.appendChild(gridItem);
   });
 
+  const footer = document.createElement("footer");
+
+  const creditSpan = document.createElement("span");
+  creditSpan.classList.add("credit-span");
+  const imgCredit = document.createElement("a");
+  imgCredit.textContent = "Photo by Chris Liverani";
+  imgCredit.href = "https://unsplash.com/@chrisliverani";
+
+  const licenseSpan = document.createElement("span");
+  licenseSpan.classList.add("license-span");
+  const copywright = document.createElement("p");
+  copywright.textContent = "© Pedro Castro 2023";
+
+  licenseSpan.appendChild(copywright);
+  creditSpan.appendChild(imgCredit);
+
+  footer.appendChild(creditSpan);
+  footer.appendChild(licenseSpan);
+
   rightSidePage.appendChild(menuHeader);
   rightSidePage.appendChild(menuGridWrapper);
 
   main.appendChild(leftSidePage);
   main.appendChild(rightSidePage);
+  main.appendChild(footer);
 
   container.appendChild(main);
 }
