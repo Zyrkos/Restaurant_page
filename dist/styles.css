@@ -196,11 +196,80 @@ h4 {
 
 /*----------CONTACTS-------------*/
 
-#contact-main {
-  height: 100vh;
-  background-color: var(--lighter-grey-green);
+.contact-main {
+  display: flex;
 }
 
+.contact-flex-wrapper {
+  flex: 4;
+  height: 100vh;
+}
+
+.contact-information {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 8rem;
+  left: 20rem;
+}
+
+.info-card {
+  font-size: 20px;
+}
+
+.info-card > h4 {
+  margin-bottom: 2rem;
+}
+
+.info-card > p {
+  margin: 1rem 0;
+}
+
+.location {
+  height: 100vh;
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.location-header {
+  position: absolute;
+  top: 8rem;
+}
+
+.location-header > h1 {
+  font-size: 2.5rem;
+  color: var(--aspargus-green);
+}
+
+.info-card > h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  margin-top: 5rem;
+}
+
+.form-header > h2 {
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 50%;
+  padding: 5px;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: 1px solid black;
+}
 /* MEDIA QUERIES */
 
 @media (max-width: 1200px) {
