@@ -2,8 +2,8 @@
   "name": "restaurant_page",
   "version": "1.0.0",
   "repository": {
-   "url": "git+https://github.com/Zyrkos/Restaurant_page.git"
- },
+    "url": "git+https://github.com/Zyrkos/Restaurant_page.git"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
