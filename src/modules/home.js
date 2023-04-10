@@ -1,7 +1,7 @@
 export function createHome() {
   const main = document.createElement("main");
   main.setAttribute("id", "home-main");
-  main.classList.add("main");
+  main.classList.add("home-main");
   /*--------------------------------------------*/
   const headerSpan = document.createElement("span");
   headerSpan.classList.add("header-span");

@@ -94,12 +94,10 @@ footer {
   font-size: 0.85rem;
 }
 
-
-
 /*----------------HEADER END---------------------*/
 
 /*--------------HOME----------------*/
-#home-main {
+.home-main {
   background: url(../images/avocado.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -226,7 +224,7 @@ h4 {
 }
 
 .location {
-  height: 100vh;
+  
   flex: 4;
   display: flex;
   flex-direction: column;
@@ -270,6 +268,7 @@ input {
   font-size: 1rem;
   border: 1px solid black;
 }
+
 /* MEDIA QUERIES */
 
 @media (max-width: 1200px) {
@@ -279,6 +278,11 @@ input {
 }
 
 @media (max-width: 768px) {
+  .home-main > .header-span {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+  }
+
   .menu-grid-wrapper {
     grid-template-columns: none;
     grid-template-rows: repeat(3, 1fr);
@@ -286,5 +290,31 @@ input {
   }
   .left-side-page {
     display: none;
+  }
+
+  /*----contact-main-----*/
+
+  .contact-main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .contact-information {
+    position: absolute;
+    left: 0;
+  }
+
+  .location {
+    position: absolute;
+    top: 60rem;
+    margin-top: -100px;
+    margin-bottom: 10rem;
+  }
+
+  .google-maps > iframe {
+    width: 300px;
+    height: 300px;
   }
 }
