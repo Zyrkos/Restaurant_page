@@ -206,9 +206,9 @@ h4 {
 .contact-information {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  /*  position: absolute;
   top: 8rem;
-  left: 20rem;
+  left: 20rem; */
 }
 
 .info-card {
@@ -224,17 +224,11 @@ h4 {
 }
 
 .location {
-  
   flex: 4;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.location-header {
-  position: absolute;
-  top: 8rem;
 }
 
 .location-header > h1 {
@@ -277,6 +271,21 @@ input {
   }
 }
 
+@media (min-width: 1200px) {
+  .contact-information {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 8rem;
+    left: 20rem;
+  }
+
+  .location-header {
+    position: absolute;
+    top: 8rem;
+  }
+}
+
 @media (max-width: 768px) {
   .home-main > .header-span {
     font-size: 1.5rem;
@@ -304,17 +313,38 @@ input {
   .contact-information {
     position: absolute;
     left: 0;
+    top: 5rem;
+  }
+
+  .info-card {
+    margin: 2rem;
+  }
+
+  .contact-form {
+    margin: 2rem;
+  }
+
+  input {
+    width: 80%;
   }
 
   .location {
     position: absolute;
-    top: 60rem;
-    margin-top: -100px;
+    top: 45rem;
+
     margin-bottom: 10rem;
+  }
+
+  .location-header > h1 {
+    font-size: 2rem;
   }
 
   .google-maps > iframe {
     width: 300px;
     height: 300px;
+  }
+
+  .google-maps {
+    margin-bottom: 3rem;
   }
 }
